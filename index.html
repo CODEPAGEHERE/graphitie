@@ -14,9 +14,54 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="design.css">
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="70">
     <main class="container-fluid p-0">
-        <!-- Content will go here -->
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#">Grap</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Sections -->
+        <div id="home" class="section container-fluid p-5">
+            <h1>Home Section</h1>
+            <p>Welcome to the Home section.</p>
+        </div>
+        <div id="about" class="section container-fluid p-5">
+            <h1>About Section</h1>
+            <p>This is the About section.</p>
+        </div>
+        <div id="services" class="section container-fluid p-5">
+            <h1>Services Section</h1>
+            <p>Details about Services.</p>
+        </div>
+        <div id="skills" class="section container-fluid p-5">
+            <h1>Skills Section</h1>
+            <p>Information about Skills.</p>
+        </div>
+        <div id="portfolio" class="section container-fluid p-5">
+            <h1>Portfolio Section</h1>
+            <p>Portfolio content goes here.</p>
+        </div>
+        <div id="contact" class="section container-fluid p-5">
+            <h1>Contact Section</h1>
+            <p>Contact information.</p>
+        </div>
     </main>
 </body>
 </html>
