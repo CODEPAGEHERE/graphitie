@@ -8,5 +8,39 @@
 /* Ensure main covers full screen */
 main {
     width: 100vw;
-    height: 100vh;
+}
+
+/* Basic styles for mobile-first approach */
+.section {
+    min-height: 100vh;
+    padding: 60px 20px; /* Adjust for fixed navbar height */
+    text-align: center;
+}
+
+.section h1 {
+    margin-bottom: 20px;
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+    .section {
+        padding: 80px 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    .section {
+        padding: 100px 60px;
+    }
+}
+
+/* Custom styles for navigation links */
+.navbar-nav .nav-link {
+    cursor: pointer;
+}
+
+/* Style for active link */
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #007bff !important;
 }
