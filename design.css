@@ -1,46 +1,26 @@
-/* Reset margins and paddings */
-* {
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
 }
 
-/* Ensure main covers full screen */
-main {
-    width: 100vw;
-}
-
-/* Basic styles for mobile-first approach */
 .section {
-    min-height: 100vh;
-    padding: 60px 20px; /* Adjust for fixed navbar height */
-    text-align: center;
+    padding: 60px 0;
 }
 
-.section h1 {
-    margin-bottom: 20px;
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Media Queries for larger screens */
-@media (min-width: 768px) {
-    .section {
-        padding: 80px 40px;
-    }
+nav .navbar-nav .nav-link {
+    font-size: 1.2em;
 }
 
-@media (min-width: 992px) {
-    .section {
-        padding: 100px 60px;
-    }
-}
-
-/* Custom styles for navigation links */
-.navbar-nav .nav-link {
-    cursor: pointer;
-}
-
-/* Style for active link */
-.navbar-nav .nav-link.active {
-    font-weight: bold;
-    color: #007bff !important;
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
