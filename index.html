@@ -4,64 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graphitie</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap-4.6.2-dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="design.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body data-spy="scroll" data-target="#navbarNav" data-offset="70">
-    <main class="container-fluid p-0">
-        <!-- Navigation Bar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <a class="navbar-brand" href="#">Grap</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+<body>
+    <header class="bg-dark text-white p-3">
+        <div class="container">
+            <h1>Grapht</h1>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-        <!-- Sections -->
-        <div id="home" class="section container-fluid p-5">
-            <h1>Home Section</h1>
-            <p>Welcome to the Home section.</p>
-        </div>
-        <div id="about" class="section container-fluid p-5">
-            <h1>About Section</h1>
-            <p>This is the About section.</p>
-        </div>
-        <div id="services" class="section container-fluid p-5">
-            <h1>Services Section</h1>
-            <p>Details about Services.</p>
-        </div>
-        <div id="skills" class="section container-fluid p-5">
-            <h1>Skills Section</h1>
-            <p>Information about Skills.</p>
-        </div>
-        <div id="portfolio" class="section container-fluid p-5">
-            <h1>Portfolio Section</h1>
-            <p>Portfolio content goes here.</p>
-        </div>
-        <div id="contact" class="section container-fluid p-5">
-            <h1>Contact Section</h1>
-            <p>Contact information.</p>
-        </div>
+    <main class="container-fluid">
+        <section id="home" class="section p-5">
+            <div class="container">
+                <h2>Welcome to Grapht</h2>
+                <p>This is the home section with introductory text or images.</p>
+            </div>
+        </section>
+
+        <section id="resume" class="section p-5 bg-light">
+            <div class="container">
+                <h2>Resume</h2>
+                <p>Details about your professional experience and education.</p>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section p-5">
+            <div class="container">
+                <h2>Portfolio</h2>
+                <p>Showcase your projects and work here.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section p-5 bg-light">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>Get in touch through this contact form.</p>
+            </div>
+        </section>
     </main>
+
+    <footer class="bg-dark text-white text-center p-3">
+        <div class="container">
+            <p>&copy; 2024 Grapht. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
