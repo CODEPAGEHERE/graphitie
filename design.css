@@ -50,6 +50,15 @@ footer {
 #cv:hover {
     background-color: #e0e0e0;
 }
+ 
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
 
 /* Media Queries */
 @media (max-width: 767px) {
@@ -73,5 +82,59 @@ footer {
 
     footer {
         padding: 10px 0;
+    }
+}
+
+
+/*CONTACT STYLE*/
+/* Contact Section Styling */
+#contact {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+#contact h2{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#contact h4{
+    text-align: right;
+}
+
+#contact .form-group label {
+    font-weight: bold;
+}
+
+#contact .btn-primary {
+    background-color: #011020;
+    color:white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+#contact .btn-primary:hover {
+    background-color: #2e82db;
+}
+
+#contact .fa {
+    color: #020020;
+}
+
+#contact .fa:hover {
+    color: #007bff;
+}
+
+@media (max-width: 767px) {
+    #contact .col-md-6 {
+        text-align: center;
+    }
+
+    #contact .d-flex {
+        justify-content: center;
     }
 }
