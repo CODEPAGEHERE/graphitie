@@ -87,54 +87,90 @@ footer a:hover {
 
 
 /*CONTACT STYLE*/
-/* Contact Section Styling */
-#contact {
-    background-color: #ffffff;
-    padding: 60px 0;
+/* Styling for the contact section */
+#contact .col-md-6 form {
+    padding: 20px; /* Add some padding around the form */
+    background-color: #ffffff; /* Set a white background color */
+    border-radius: 10px; /* Round the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-#contact h2{
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    font-size: 2.5em;
-    text-align: center;
-}
-
-#contact h4{
-    text-align: right;
-}
-
+/* Styling for the form elements */
 #contact .form-group label {
-    font-weight: bold;
+    font-weight: bold; /* Make the labels bold */
+    color: #333333; /* Set the label color */
+}
+
+#contact .form-control {
+    border-radius: 5px; /* Round the corners of input fields */
+    border: 1px solid #cccccc; /* Set a light border color */
+    padding: 10px; /* Add padding inside the input fields */
+    font-size: 1em; /* Set the font size */
+}
+
+#contact .form-control:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a blue glow on focus */
 }
 
 #contact .btn-primary {
-    background-color: #011020;
-    color:white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 1em;
+    background-color: #007bff; /* Set the button background color */
+    border: none; /* Remove the border */
+    padding: 10px 20px; /* Add padding inside the button */
+    font-size: 1em; /* Set the font size */
+    border-radius: 5px; /* Round the corners */
+    transition: background-color 0.3s ease; /* Add a transition effect */
 }
 
 #contact .btn-primary:hover {
-    background-color: #2e82db;
+    background-color: #0056b3; /* Change the background color on hover */
 }
 
-#contact .fa {
-    color: #020020;
+/* Styling for the contact information and icons */
+#contact .text-center h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-#contact .fa:hover {
+#contact .text-center .d-inline-block a {
+    margin-right: 10px;
+    color: #333333;
+    transition: color 0.3s ease;
+}
+
+#contact .text-center .d-inline-block a:hover {
     color: #007bff;
 }
 
+#contact .d-flex.align-items-center i {
+    color: #007bff; /* Icon color */
+}
+
+#contact .d-flex.align-items-center h5 {
+    margin: 0 0 5px 0; /* Margin around the heading */
+    font-weight: bold; /* Make the heading bold */
+}
+
+#contact .d-flex.align-items-center p {
+    margin: 0; /* Remove margin from paragraph */
+}
+
+/* Media Queries for responsive design */
 @media (max-width: 767px) {
     #contact .col-md-6 {
-        text-align: center;
+        margin-bottom: 20px; /* Add margin at the bottom for spacing */
     }
 
-    #contact .d-flex {
-        justify-content: center;
+    #contact .text-center .d-inline-block a {
+        margin-right: 5px; /* Reduce margin on smaller screens */
+    }
+
+    #contact .form-control {
+        font-size: 0.9em; /* Reduce font size for input fields */
+    }
+
+    #contact .btn-primary {
+        width: 100%; /* Make the button full width on small screens */
+        font-size: 0.9em; /* Reduce font size for the button */
     }
 }
