@@ -19,6 +19,8 @@ nav .navbar-nav .nav-link {
     font-size: 1.2em;
 }
 
+/* FOOTER STYLE */
+
 footer {
     position: relative;
     bottom: 0;
@@ -26,21 +28,50 @@ footer {
     background-color: rgb(0, 0, 31);
     color: white;
     text-align: center;
-    margin-top: 50%;
-    height: 100px;
-
+    padding: 20px 0;
+    margin-top: 50px;
 }
 
-#cv{
+#cv {
     background-color: white;
     color: black;
     max-width: 300px;
     max-height: 300px;
-    margin-top: 500px;
-    margin-left: 400px;
+    padding: 10px 20px;
+    margin: 20px auto; /* Center align */
+    display: inline-block;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#cv:hover {
+    background-color: #e0e0e0;
 }
 
 /* Media Queries */
 @media (max-width: 767px) {
-   
+    #cv {
+        max-width: 250px;
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 575px) {
+    #cv {
+        max-width: 200px;
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
 }
