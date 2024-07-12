@@ -11,6 +11,7 @@ body, html {
 
 header {
     position: fixed;
+    display: inline-flex;
     top: 0;
     z-index: 1000;
 }
@@ -87,7 +88,6 @@ footer a:hover {
 
 
 /*CONTACT STYLE*/
-/* Styling for the contact section */
 #contact .col-md-6 form {
     padding: 20px; /* Add some padding around the form */
     background-color: #ffffff; /* Set a white background color */
