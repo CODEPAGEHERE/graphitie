@@ -16,7 +16,7 @@ header {
     top: 0; /* Ensure the header stays at the top */
     z-index: 1000;
     width: 100%;
-    height: 10%;
+    height: auto;
     text-align: center;
     padding: 10px 0; /* Added padding for better spacing */
 }
@@ -35,13 +35,14 @@ nav .navbar-nav .nav-link {
     font-size: 1.2em;
 }
 
+#menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
 /* Media Queries for responsiveness */
 @media (max-width: 767px) {
-    header {
-        height: auto; /* Adjust height for smaller screens */
-        padding: 10px 0; /* Adjust padding for smaller screens */
-    }
-
     li {
         display: block;
         margin-right: 0;
@@ -52,8 +53,20 @@ nav .navbar-nav .nav-link {
         text-align: center;
         padding: 10px 0;
     }
-}
 
+    #menu-toggle {
+        display: block;
+        color: white;
+    }
+
+    .navbar-collapse {
+        display: none; /* Initially hide the navbar */
+    }
+
+    .navbar-collapse.show {
+        display: block; /* Show the navbar when toggled */
+    }
+}
 
 /* FOOTER STYLE */
 
