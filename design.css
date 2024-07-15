@@ -10,6 +10,10 @@ body, html {
 }
 
 
+
+
+
+
 /* FOOTER STYLE */
 
 footer {
@@ -79,6 +83,69 @@ footer a:hover {
 
 
 
+
+
+
+
+/* CONTACT STYLE */
+#contact  form {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
+}
+
+#contact .form-control {
+    border-radius: 5px; 
+    border: 1px solid #cccccc; 
+    padding: 10px; 
+    font-size: 1em; 
+}
+
+#contact .form-control:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+#contact .btn-primary {
+    background-color: #ffffff; 
+    border: 1px solid #cccccc; 
+    padding: 10px 20px; 
+    font-size: 1em; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+
+#contact .btn-primary:hover {
+    background-color: #0465ce; /* Change the background color on hover */
+}
+.form-group{
+    margin-left: 10%;
+}
+
+#contact .form-control#email,#message{
+    width: 70%;
+    margin-top: 5%;
+}
+#contact #formsubmit{
+    margin-left: 80%;
+}
+
+#contact .text-center h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#contact .text-center .d-inline-block a {
+    margin-right: 10px;
+   
+
+
+
+
+
+
 /* The header style */
 header {
     background-color: rgb(8, 8, 54);
@@ -141,102 +208,4 @@ nav .navbar-nav .nav-link {
 
 
 
-/*CONTACT STYLE*/
-#contact .col-md-6 form {
-    padding: 20px; 
-    background-color: #ffffff; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-/* Styling for the form elements */
-#contact .form-group label {
-    font-weight: bold; 
-    color: #333333; 
-}
-
-#contact .form-control {
-    border-radius: 5px; /* Round the corners of input fields */
-    border: 1px solid #cccccc; /* Set a light border color */
-    padding: 10px; /* Add padding inside the input fields */
-    font-size: 1em; /* Set the font size */
-}
-
-#contact .form-control:focus {
-    border-color: #007bff; /* Change border color on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a blue glow on focus */
-}
-
-#contact .btn-primary {
-    background-color: #007bff; /* Set the button background color */
-    border: none; /* Remove the border */
-    padding: 10px 20px; /* Add padding inside the button */
-    font-size: 1em; /* Set the font size */
-    border-radius: 5px; /* Round the corners */
-    transition: background-color 0.3s ease; /* Add a transition effect */
-}
-
-#contact .btn-primary:hover {
-    background-color: #0056b3; /* Change the background color on hover */
-}
-
-/* Styling for the contact information and icons */
-#contact .text-center h4 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-#contact .text-center .d-inline-block a {
-    margin-right: 10px;
-    color: #333333;
-    transition: color 0.3s ease;
-}
-
-#contact .text-center .d-inline-block a:hover {
-    color: #007bff;
-}
-
-#contact .d-flex.align-items-center i {
-    color: #007bff; /* Icon color */
-}
-
-#contact .d-flex.align-items-center h5 {
-    margin: 0 0 5px 0; /* Margin around the heading */
-    font-weight: bold; /* Make the heading bold */
-}
-
-#contact .d-flex.align-items-center p {
-    margin: 0; /* Remove margin from paragraph */
-}
-
-/* Media Queries for responsive design */
-@media (max-width: 767px) {
-    #contact .col-md-6 {
-        margin-bottom: 20px; /* Add margin at the bottom for spacing */
-    }
-
-    #contact .text-center .d-inline-block a {
-        margin-right: 5px; /* Reduce margin on smaller screens */
-    }
-
-    #contact .form-control {
-        font-size: 0.9em; /* Reduce font size for input fields */
-    }
-
-    #contact .btn-primary {
-        width: 100%; /* Make the button full width on small screens */
-        font-size: 0.9em; /* Reduce font size for the button */
-    }
-}
-
-#siza{
-    width: 50%;
-    background-color: #0056b3;
-    float: left;
-}
-
-#sizb{
-    width: 50%;
-    background-color: #333333;
-    float: left;
 }
