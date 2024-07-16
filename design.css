@@ -139,15 +139,39 @@ footer a:hover {
 
 #contact .text-center .d-inline-block a {
     margin-right: 10px;
-   
+}
 
+#contact #padd{
+    width: 50%;
+    float: inline-start;
+}
+
+#contact #padd2{
+    width: 50%;
+    height: 300px;
+    float: inline-end;
+    text-align: center;
+    background-color: #007bff;
+}
+#contact #social{
+    height: 50%;
+}
+
+#contact #social a{
+    color: black;
+    display: inline-block;
+}
+
+#contact h2{
+    text-align: center;
+}
 
 
 
 
 
 /* The header style */
-header {
+ header {
     background-color: rgb(8, 8, 54);
     position: sticky;
     top: 0; /* Ensure the header stays at the top */
@@ -208,4 +232,3 @@ nav .navbar-nav .nav-link {
 
 
 
-}
