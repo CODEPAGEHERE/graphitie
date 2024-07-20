@@ -12,8 +12,6 @@ body, html {
 
 
 
-
-
 /* FOOTER STYLE */
 
 footer {
@@ -92,7 +90,7 @@ footer a:hover {
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
-    width: 50%;
+    width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
 }
 
@@ -151,7 +149,7 @@ footer a:hover {
     height: 300px;
     float: inline-end;
     text-align: center;
-    background-color: #007bff;
+    
 }
 #contact #social{
     height: 50%;
@@ -160,10 +158,22 @@ footer a:hover {
 #contact #social a{
     color: black;
     display: inline-block;
+    font-size: 30px;
+    margin-top: 200px;
 }
 
 #contact h2{
     text-align: center;
+}
+
+@media (max-width: 767px){
+    #contact #padd{
+        width: 100%;
+    }
+
+    #contact #padd2{
+        width: 100%;
+    }
 }
 
 
