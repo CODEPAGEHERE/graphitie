@@ -44,7 +44,7 @@ footer {
     margin-bottom: 10px; /* Space between the button and the text */
 }
 #cv{
-    margin-left: 100px;
+    margin-left: 70px;
 }
 
 /* Hover effect for CV button */
@@ -65,7 +65,9 @@ footer a:hover {
 /* Media Queries */
 @media (max-width: 767px) {
     #cv {
-        max-width: 250px;
+        width: fit-content;
+        height: fit-content;
+        margin-left: 30%;
         padding: 8px 16px;
         font-size: 0.9em;
     }
@@ -221,20 +223,25 @@ footer a:hover {
 #contact #social{
     height: 30%;
     margin-top: 0%;
+    margin-bottom: 0px;
 }
 
 #contact #social a{
     color: black;
     display: inline-block;
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 20px;
+    
 }
 #contact #social p{
     font-size: 20px;
     color: #01264e;
 }
 
+#contact{
+    margin-bottom: 0px;
+}
 
 
 
