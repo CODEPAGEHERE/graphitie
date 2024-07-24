@@ -1,5 +1,64 @@
 {
-    "category:"{ "product" {
-        "designlink" : "description" : "image"{}
-    }}
+  "categories": [
+    {
+      "category": "UI / UX Designs",
+      "projects": [
+        {
+          "name": "facebook",
+          "description": "Description for Project A1",
+          "iframe": "www.lindaikeji.com/"
+        },
+        {
+          "name": "Project A2",
+          "description": "Description for Project A2",
+          "iframe": "https://javascript.com/"
+        }
+      ]
+    },
+    {
+      "category": "Branding",
+      "projects": [
+        {
+          "name": "Project B1",
+          "description": "Description for Project B1",
+          "iframe": "https://apple.com/"
+        },
+        {
+          "name": "Project B2",
+          "description": "Description for Project B2",
+          "iframe": "https://javascript.com/"
+        }
+      ]
+    },
+    {
+      "category": "Graphics Designs",
+      "projects": [
+        {
+          "name": "Project C1",
+          "description": "Description for Project C1",
+          "iframe": "https://wix.com/"
+        },
+        {
+          "name": "Project C2",
+          "description": "Description for Project C2",
+          "iframe": "https://wordpress.com/"
+        }
+      ]
+    },
+    {
+      "category": "Motion Graphics",
+      "projects": [
+        {
+          "name": "Project D1",
+          "description": "Description for Project D1",
+          "iframe": "https://apple.com/"
+        },
+        {
+          "name": "Project D2",
+          "description": "Description for Project D2",
+          "iframe": "www.google.com"
+        }
+      ]
+    }
+  ]
 }

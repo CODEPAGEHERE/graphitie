@@ -295,6 +295,11 @@ footer a:hover {
     display: none;
 }
 
+#flexy{
+    margin-bottom: 600px;
+    overflow-x: scroll;
+}
+
 @media (max-width: 767px) {
   
     #portfolio h2{
@@ -336,12 +341,12 @@ footer a:hover {
         text-decoration:underline
     }
 
-    #drop1{
+    #drop1 ,#All{
         display: block;
         margin-left: 50px;
     }
 
-    .oth{
+    .filter-link{
         display: none;
     }
 
