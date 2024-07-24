@@ -296,6 +296,8 @@ footer a:hover {
 }
 
 #flexy{
+    width: 100%;
+    height: 500px;
     margin-bottom: 600px;
     overflow-x: scroll;
 }
