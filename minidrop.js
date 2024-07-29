@@ -1,10 +1,10 @@
 // Define the HTML for the select element as a string
 const a = `
     <select>
-        <option><a href = "/">UI / UX Designs</a></option>
-        <option><a href = "/">Branding</a></option>
-        <option><a href = "/">Graphics design</a></option>
-        <option><a href = "/">Motion Graphics</a></option>
+        <option><a href = "#" class="filter-link" data-category="UI / UX Designs">UI / UX Designs</a></option>
+        <option><a href = "#" class="filter-link" data-category="Branding">Branding</a></option>
+        <option><a href = "#" class="filter-link" data-category="Graphics design">Graphics design</a></option>
+        <option><a href = "#" class="filter-link" data-category="Motion Graphics">Motion Graphics</a></option>
     </select>
 `;
 

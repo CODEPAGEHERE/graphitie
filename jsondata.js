@@ -27,9 +27,15 @@ function displayPortfolioItems(categories, selectedCategory) {
             projectElement.style.display = 'inline-block';
             projectElement.style.margin = '10px';
             projectElement.innerHTML = `
-                <iframe src="${project.iframe}" style="width: 500px; height: 250px; border: 1px solid black;"></iframe>
+                <iframe src="${project.iframe}" class="portfolio-iframe" style="width: 700px; height: 400px; border: 1px solid black; border-radius:30px;margin-top:30px;"></iframe>
             `;
             projectElement.addEventListener('click', () => {
+                const allIframes = document.querySelectorAll('.portfolio-iframe');
+                allIframes.forEach(iframe => iframe.classList.remove('active'));
+
+                const activeIframe = projectElement.querySelector('.portfolio-iframe');
+                activeIframe.classList.add('active');
+
                 document.getElementById('project-name').textContent = project.name;
                 document.getElementById('project-description').textContent = project.description;
             });
