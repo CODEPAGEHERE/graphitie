@@ -3,133 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphitie  !</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-   <!-- project Font is inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Graphitie</title>
     <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <i class='fas fa-bars'></i>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#resume">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+
+    <!-- Header -->
+    <header id="navbar">
+        <nav class="container navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
-    <main class="container-fluid">
-        <section id="home" class="section p-5">
-            <div class="container">
-                <h2>Welcome to Grapht</h2>
-                <p>This is the home section with introductory text or images.</p>
-            </div>
-        </section>
-
-        <section id="resume" class="section p-5 bg-light">
-            <div class="container">
-                <h2>Resume</h2>
-                <p>Details about your professional experience and education.</p>
-            </div>
-        </section>
-
-
-        <section id="skills" class="section p-5 bg-light">
-            <div class="container">
-                <h2>My Skills</h2>
-                <p>Details about your professional experience and education.</p>
-            </div>
-        </section>
-
-
-
-        <section id="portfolio" class="section p-5">
-            <div class="container">
-                <h2>Portfolio</h2>
-                <ul>
-                    <li><a href="#" id="All" class="filter-link" data-category="All">All</a></li>
-                    <li id="drop1"></li>
-                    <li><a href="#" class="filter-link" data-category="UI / UX Designs">UI / UX Designs</a></li>
-                    <li><a href="#" class="filter-link" data-category="Branding">Branding</a></li>
-                    <li><a href="#" class="filter-link" data-category="Graphics Designs">Graphics Designs</a></li>
-                    <li><a href="#" class="filter-link" data-category="Motion Graphics">Motion Graphics</a></li>
-                </ul>
-                <br>
-                <br>
-                <br>
-                <div id="info">
-                    <h4 id="project-name"></h4>
-                    <p id="project-description"></p>
-                </div>
-                <div class="container-fluid" id="flexy">
-                    <div id="portfolio-items">
-                        <!-- Portfolio items will be inserted here -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-
-
-
-        <section id="contact" class="section p-5 bg-light">
-            <div class="container">
-                <h2>Contact Me</h2>
-                <div class="row">
-                    <div class="col-md-4"  id="padd">
-                        <form action="/myemail" method="post">
-                            <i class='fas fa-envelope-open-text'></i>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="email" placeholder="mymail@gmail.com">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id="message" rows="10" columns = "10" placeholder="Hello, I'll like to"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary" id="formsubmit">Send</button>
-                        </form>
-                    </div>
-                 
-                    <div class="col-md-4"  id="padd2"> 
-                        <div id="social">
-                                <a href="#"><i class='fab fa-linkedin'></i></a> 
-                                <a href="#"><i class='fab fa-instagram'></i></a>
-                                <a href="#"><i class='fas fa-address-card'></i></a>
-                                <br>
-                                <a href="#" id="whatsapp"><i class='fab fa-whatsapp-square'></i><span id="whatsap">+234 816 948 5251</span></a>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-                       
-        
-    </main>
-
-    <footer>
-        <div class="container">
-            <div id="cv">
-                <p>DOWNLOAD CV</p>
-            </div>
-            <p id="copy">Copyright &copy <a href = "/">HappyCode</a> 2024 - All Rights Reserved Graphitie.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container text-center">
+            <h1>Graphics, Motion Graphics, UI & UX Designer</h1>
+            <p>Hi, I'm Ayanyowe Boluwatife John, a passionate Designer.</p>
+            <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
         </div>
-    </footer>
-    <script src="headertogg.js"></script>
-    <script src="minidrop.js"></script>
-    <script src="jsondata.js"></script>
+        <div class="hexagon-container">
+            <!-- Animated Hexagons -->
+            <div class="hexagon hex1"></div>
+            <div class="hexagon hex2"></div>
+            <div class="hexagon hex3"></div>
+        </div>
+    </section>
+
+
+<!--About Section -->
+
+    <section id="about" class="section p-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Profile Image -->
+			<div class="col-md-5 text-center">
+			<img src="https://lh3.googleusercontent.com/d/1axsjYXPEOtAIArTQjL9s3xO7PXV04uyX=w1000" alt="Profile Image">
+			</div>
+
+            <!-- About Content -->
+            <div class="col-md-7">
+                <h2>About Me</h2>
+                <br>
+                <h4>Few things you might want to know about me</h4>
+                <p>
+                    Hi, I'm <b>Ayanyowe Boluwatife John</b>, a passionate Designer who loves the art more than anything else.
+                    Currently based in Lagos, Nigeria, I welcome you to my portfolio world.
+                </p>
+				
+				<br>
+                <!-- Contact Details -->
+                <h4><strong>Contact:</strong></h4>
+                <p><i class="bi bi-whatsapp "></i> +234 816 948 5251</p>
+                <p><i class="bi bi-envelope-fill"></i> ayanwoyejohn292@gmail.com</p>
+
+                <!-- Buttons -->
+                <div class="btn-group">
+                    <a href="https://wa.me/2341234567890?text=Hello%2C%20I'm%20interested%20in%20hiring%20you.%20Can%20we%20discuss%20further%3F"  class="btn btn-dark btn-lg">Hire Me</a>
+                    <a id="download-cv" href="#" download class="btn btn-outline-dark btn-lg">Download CV</a>
+                </div>
+				
+
+				<!-- Bootstrap 4 Toast Notification -->
+				<div aria-live="polite" aria-atomic="true" style="position: fixed; top: 20px; right: 20px; min-width: 250px;">
+					<div class="toast" id="cv-toast" data-delay="3000">
+						<div class="toast-header">
+							<strong class="mr-auto">Download Started</strong>
+							<button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+						</div>
+						<div class="toast-body">
+							✅ Your CV download has started!
+						</div>
+					</div>
+				</div>
+
+
+
+
+               <!-- Stats (Horizontally Aligned) -->
+			<div class="stats mt-5 d-flex justify-content-between text-center">
+				<div class="stat"><strong>97+</strong> Projects Completed</div>
+				<div class="stat"><strong>5+</strong> Years of Experience</div>
+				<div class="stat"><strong>20+</strong> Happy Clients</div>
+			  </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- About Section Hexagons -->
+<!-- Hexagon 1 -->
+<div class="about-hexagon-shadow about-hex1-shadow"></div>
+<div class="about-hexagon about-hex1"></div>
+
+<!-- Hexagon 2 -->
+<div class="about-hexagon-shadow about-hex2-shadow"></div>
+<div class="about-hexagon about-hex2"></div>
+
+<!-- Hexagon 3 -->
+<div class="about-hexagon-shadow about-hex3-shadow"></div>
+<div class="about-hexagon about-hex3"></div>
+
+
+</section>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="script.js"></script>
+<script src="cv.js"></script>
+	
 </body>
 </html>
