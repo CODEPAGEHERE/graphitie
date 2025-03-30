@@ -156,3 +156,54 @@ body {
 .about-hexagon, .about-hexagon-shadow {
     animation: hexMove 5s infinite ease-in-out;
 }
+
+/* Make Profile Image and Text Centered on Mobile */
+@media (max-width: 768px) {
+    .col-md-5.text-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .col-md-7 {
+        text-align: center;
+    }
+
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stat {
+        margin-bottom: 15px;
+    }
+}
+
+/* Hexagons - Behind Text but Not Behind Page */
+.about-hexagon, .about-hexagon-shadow {
+    position: absolute;
+    width: 150px;
+    height: 170px;
+    z-index: 0; /* Keeps hexagons behind text but not behind the entire page */
+	opacity:0.3;
+}
+
+/* Adjust Hexagon Positions */
+.about-hex1 { top: 50px; left: 20px; }
+.about-hex2 { top: 250px; left: 200px; }
+.about-hex3 { top: 400px; right: 30px; }
+
+/* Make Sure Other Elements Appear Above Hexagons */
+.col-md-5, .col-md-7 {
+    position: relative;
+    z-index: 1; /* Ensure text and images appear on top of hexagons */
+}
