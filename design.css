@@ -184,9 +184,8 @@ body {
     }
 
     .stat {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
-}
 
 /* Hexagons - Behind Text but Not Behind Page */
 .about-hexagon, .about-hexagon-shadow {
@@ -200,10 +199,14 @@ body {
 /* Adjust Hexagon Positions */
 .about-hex1 { top: 50px; left: 20px; }
 .about-hex2 { top: 250px; left: 200px; }
-.about-hex3 { top: 400px; right: 30px; }
+.about-hex3 { top: 500px; right: -20px; }
 
 /* Make Sure Other Elements Appear Above Hexagons */
 .col-md-5, .col-md-7 {
     position: relative;
     z-index: 1; /* Ensure text and images appear on top of hexagons */
+	margin-top:150px;
+	margin-bottom:-60px;
+}
+
 }
