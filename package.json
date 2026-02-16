@@ -1,0 +1,16 @@
+{
+  "name": "graphitie",
+  "version": "1.0.0",
+  "description": "Graphitie Originals Official Website.",
+  "private": true,
+  "scripts": {
+    "dev": "browser-sync start --config dev-config.js",
+    "start": "npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.4"
+  }
+}
