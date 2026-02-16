@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://ik.imagekit.io/happycode100/graphitie/graphitie_logo.jpeg" alt="Graphitie Originals Logo" width="120" />
+  <img src="https://ik.imagekit.io/workdesk/graphitie/GraphitieLogo.png" alt="Graphitie Originals Logo" width="120" />
 </p>
 
 <h1 align="center">Graphitie Originals</h1>
@@ -8,20 +8,6 @@
 <img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-7952b3?style=for-the-badge&logo=bootstrap&logoColor=white"/> 
 <img alt="GSAP" src="https://img.shields.io/badge/GSAP-88ce02?style=for-the-badge"/> 
 <img alt="Contentful" src="https://img.shields.io/badge/Contentful-000000?style=for-the-badge"/> 
-</p>
-
----
-
-<p align="center">
-  <img src="https://ik.imagekit.io/happycode100/graphitie/graphitie_logo.jpeg" alt="Graphitie Originals Logo" width="120" />
-</p>
-
-<h1 align="center">Graphitie Originals</h1>
-
-<p align="center">
-<img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-7952b3?style=for-the-badge&logo=bootstrap&logoColor=white"/>
-<img alt="GSAP" src="https://img.shields.io/badge/GSAP-88ce02?style=for-the-badge"/>
-<img alt="Contentful" src="https://img.shields.io/badge/Contentful-000000?style=for-the-badge"/>
 </p>
 
 ---
@@ -87,7 +73,7 @@ graphitie/
 ├── assets/          # Images, videos, icons managed via Contentful
 ├── README.md        # Project documentation
 ├── dev-config.js    # BrowserSync + runtime config for local dev
-├── start-dev.bat    # One-click local dev server
+├── graphitie.bat    # One-click local dev server
 ├── .env             # Local environment variables (ignored)
 └── ...              # Additional folders as needed
 ```
@@ -99,7 +85,7 @@ graphitie/
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/your-org/graphitie.git
+git clone https://github.com/codepagehere/graphitie.git
 cd graphitie
 ```
 
@@ -120,7 +106,7 @@ npm install
 
 ```bash
 # Start the local SPA server with live reload
-start-dev.bat
+graphitie.bat
 ```
 
 ---
@@ -128,7 +114,7 @@ start-dev.bat
 ## 📬 Contact
 
 For feedback, questions, or collaboration:
-📧 [collab@graphitieoriginals.com](mailto:collab@graphitieoriginals.com)
+📧 [collab@happycodetechnologies.com](mailto:collab@happycodetechnologies.com)
 
 ---
 
@@ -137,17 +123,3 @@ For feedback, questions, or collaboration:
 Copyright © 2026, **Graphitie Originals** – All Rights Reserved.
 Private & proprietary; unauthorized use or distribution is prohibited.
 
----
-
-## 🗂 Project Info
-
-```
-Code.Page.21 => v1.0
-Graphitie Originals Official Website
-A product of Graphitie Originals
-Design partner for UI/UX and product design
-Domain Name : //
-Live here : graphitie-originals.vercel.app
-Last update : 2/16/2026
-Last commit : Codepage.me
-```
