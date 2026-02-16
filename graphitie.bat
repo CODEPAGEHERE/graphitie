@@ -8,6 +8,8 @@ echo.
 echo ==============================
 echo  Graphitie Dev Server Starting
 echo ==============================
+echo Batch File Location: %~dp0
+echo Current Working Directory: %cd%
 echo.
 
 REM Check if node_modules exists

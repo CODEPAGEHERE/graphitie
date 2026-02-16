@@ -1,0 +1,18 @@
+/* =========================
+   FOOTER
+========================= */
+.footer-wrapper {
+  width: 100%;
+  background-color: #0d6efd; /* Bootstrap primary blue */
+  color: #ffffff;
+  flex-shrink: 0; /* prevent footer from shrinking */
+}
+
+.footer-wrapper a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-wrapper a:hover {
+  color: #e2e6ea;
+}
