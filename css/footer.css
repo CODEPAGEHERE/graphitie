@@ -1,18 +1,76 @@
 /* =========================
    FOOTER
 ========================= */
-.footer-wrapper {
-  width: 100%;
-  background-color: #0d6efd; /* Bootstrap primary blue */
-  color: #ffffff;
-  flex-shrink: 0; /* prevent footer from shrinking */
+
+/* Ensure full height layout */
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-.footer-wrapper a {
-  color: #ffffff;
-  text-decoration: underline;
+/* Make page take full height */
+body {
+  display: flex;
+  flex-direction: column;
 }
 
-.footer-wrapper a:hover {
-  color: #e2e6ea;
+/* Push footer to bottom */
+main {
+  flex: 1;
+}
+
+/* Footer Styling */
+.site-footer {
+  background-color: #001430;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* Container */
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Download Button */
+.download-btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #0d6efd; /* Bootstrap primary blue */
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+/* Hover Effect */
+.download-btn:hover {
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+
+/* Footer Text */
+.footer-text {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Footer Links */
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #0d6efd;
+}
+
+.footer-links span {
+  margin: 0 8px;
+  color: #888;
 }

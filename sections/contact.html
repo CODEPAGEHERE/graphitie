@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/contact.css">
+
+</head>
+<body>
+    <section class="contact-section" id="contact">
+  <h2 class="contact-title">Contact Me</h2>
+
+  <div class="contact-container">
+
+    <!-- LEFT SIDE: FORM -->
+    <form class="contact-form" id="contactForm">
+
+      <input 
+        type="email"
+        class="contact-input"
+        placeholder="Email Address"
+        required
+      >
+
+      <textarea
+        class="contact-textarea"
+        placeholder="Drop Your Message"
+        required
+      ></textarea>
+
+      <button type="submit" class="contact-btn">
+       Send Message
+      </button>
+
+    </form>
+
+    <!-- RIGHT SIDE: CONTACT CARD -->
+    <div class="contact-card">
+
+      <div class="contact-item">
+        <i class="bi bi-whatsapp"></i>
+        <span>+234 816 948 5251</span>
+      </div>
+
+      <div class="contact-item">
+        <i class="bi bi-linkedin"></i>
+        <a href="https://linkedin.com/in/ayanwoye-boluwatife-9282a7238" target="_blank">linkedin.com/in/ayanwoye-boluwatife-9282a7238"</a>
+      </div>
+
+      <div class="contact-item">
+        <i class="bi bi-behance"></i>
+       <a href="https://behance.nebehance.net/graphitie?">behance.nebehance.net/graphitie?</a> 
+      </div>
+
+      <div class="contact-item">
+        <i class="bi bi-instagram"></i>
+        <a href="https://instagram.com/graphiti_1?igsh=YzljYTk10Dg3Zg==">instagram.com/graphiti_1?igsh=YzljYTk10Dg3Zg==</a>
+      </div>
+
+      <div class="contact-item">
+        <i class="bi bi-dribbble"></i>
+        <a href="https://dribbble.com/graphitie">dribbble.com/graphitie</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Custom Success Popup -->
+<div class="contact-popup" id="contactPopup">
+  <div class="popup-content">
+    <i class="bi bi-check-circle-fill success-icon"></i>
+    <p>Message sent successfully!</p>
+    <button id="closePopup">Close</button>
+  </div>
+</div>
+
+
+</body>
+</html>
