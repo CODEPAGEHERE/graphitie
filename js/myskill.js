@@ -1,39 +1,48 @@
-document.querySelectorAll(".skill").forEach(skill => {
-  const percent = Number(skill.dataset.percent);
-  const path = skill.querySelector(".hex-progress");
-  const text = skill.querySelector(".percent");
 
-  const length = path.getTotalLength();
+// document.addEventListener("DOMContentLoaded", () => {
 
-  // initial hidden state
-  path.style.strokeDasharray = length;
-  path.style.strokeDashoffset = length;
+//   document.querySelectorAll(".skill").forEach(skill => {
+//     const path = skill.querySelector(".hex-progress");
+//     const percentEl = skill.querySelector(".percent");
+//     const value = skill.dataset.percent;
 
-  let animated = false;
+//     const length = path.getTotalLength();
 
-  skill.addEventListener("mouseenter", () => {
-    if (animated) return;
-    animated = true;
+//     gsap.set(path, {
+//       strokeDasharray: length,
+//       strokeDashoffset: length
+//     });
 
-    // faster stroke animation
-    gsap.to(path, {
-      strokeDashoffset: length * (1 - percent / 100),
-      duration: 0.6,          // 🔥 reduced from 1.4
-      ease: "power1.out"
-    });
+//     skill.addEventListener("mouseenter", () => {
+//       percentEl.textContent = value + "%";
 
-    // faster number count
-    gsap.fromTo(
-      { value: 0 },
-      { value: percent },
-      {
-        duration: 0.6,        // 🔥 reduced from 1.4
-        ease: "power1.out",
-        onUpdate() {
-          text.textContent =
-            Math.round(this.targets()[0].value) + "%";
-        }
-      }
-    );
-  });
-});
+//       gsap.to(path, {
+//         strokeDashoffset: length * (1 - value / 100),
+//         duration: 1.2,
+//         ease: "power2.out"
+//       });
+
+//       gsap.to(percentEl, {
+//         opacity: 1,
+//         y: 0,
+//         duration: 0.3
+//       });
+//     });
+
+//     skill.addEventListener("mouseleave", () => {
+//       gsap.to(path, {
+//         strokeDashoffset: length,
+//         duration: 0.6,
+//         ease: "power2.in"
+//       });
+
+//       gsap.to(percentEl, {
+//         opacity: 0,
+//         y: 6,
+//         duration: 0.3,
+//         onComplete: () => percentEl.textContent = ""
+//       });
+//     });
+//   });
+
+// });
