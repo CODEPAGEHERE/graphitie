@@ -123,3 +123,7 @@ For feedback, questions, or collaboration:
 Copyright © 2026, **Graphitie Originals** – All Rights Reserved.
 Private & proprietary; unauthorized use or distribution is prohibited.
 
+
+
+
+security note : bootstrap integrity hash
