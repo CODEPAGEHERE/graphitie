@@ -1,0 +1,73 @@
+  
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f6f6;
+    }
+
+    .skills {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      padding-top: 190px;  
+      padding-bottom: 40px;
+    }
+
+    .skills-wrapper {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .skill {
+      position: relative;
+      width: 95px;
+      height: 110px;
+      cursor: pointer;
+    }
+
+    .hexagon {
+      width: 100%;
+      height: 100%;
+      /* pointer-events: none; */
+    }
+
+    .hex-bg {
+      fill: #ffffff;
+      stroke: #001430;
+      stroke-width: 1.4;
+    }
+
+    .hex-progress {
+      fill: none;
+      /* stroke: orange; */
+      stroke-width: 3;
+      stroke-linecap: round;
+    }
+
+    .skill-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .label {
+      font-size: 11px;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .percent {
+      margin-top: 4px;
+      font-size: 14px;
+      font-weight: bold;
+      opacity: 0;
+      transform: translateY(6px);
+    }
