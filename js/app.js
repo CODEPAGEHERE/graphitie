@@ -1,5 +1,3 @@
-//import { RUNTIME_CONFIG } from './runtime-config.js'; // exposes your Contentful/ImageKit tokens
-
 const sections = [
   'home',
   'about',
@@ -13,44 +11,53 @@ const sections = [
 const app = document.getElementById('app');
 
 /**
- * Load a single section HTML and append to #app
- * @param {string} sectionName - file name without .html
+ * Load loader HTML
+ */
+async function loadLoader() {
+  const res = await fetch('sections/loader.html');
+  if (!res.ok) throw new Error('Failed to load loader.html');
+  const html = await res.text();
+
+  if (window.mountLoader) {
+    window.mountLoader(html);
+  }
+}
+
+/**
+ * Load a single section
  */
 async function loadSection(sectionName) {
   try {
     const res = await fetch(`sections/${sectionName}.html`);
-    if (!res.ok) throw new Error(`Failed to load ${sectionName}.html (status ${res.status})`);
+    if (!res.ok) throw new Error(`Failed to load ${sectionName}.html`);
+
     const html = await res.text();
 
-    const sectionWrapper = document.createElement('div');
-    sectionWrapper.id = sectionName;
-    sectionWrapper.classList.add('section-wrapper');
-    sectionWrapper.innerHTML = html;
+    const wrapper = document.createElement('div');
+    wrapper.id = sectionName;
+    wrapper.classList.add('section-wrapper');
+    wrapper.innerHTML = html;
 
-    app.appendChild(sectionWrapper);
-    console.log(`Mounted section: ${sectionName}`);
-    return sectionWrapper;
+    app.appendChild(wrapper);
+    return wrapper;
+
   } catch (err) {
     console.error(err);
     return null;
   }
 }
 
-
 /**
  * Load all sections in parallel
  */
 async function loadAllSections() {
   const promises = sections.map(loadSection);
-  const loadedSections = await Promise.all(promises);
-
-  // After all sections are mounted, trigger animations
-  initAnimations(loadedSections.filter(Boolean));
+  const loaded = await Promise.all(promises);
+  return loaded.filter(Boolean);
 }
 
 /**
- * Initialize GSAP animations
- * @param {Array} sectionsArray - array of mounted section divs
+ * Initialize animations
  */
 function initAnimations(sectionsArray) {
   gsap.from(sectionsArray, {
@@ -61,5 +68,24 @@ function initAnimations(sectionsArray) {
   });
 }
 
-// Start SPA
-loadAllSections();
+/**
+ * App lifecycle
+ */
+async function initApp() {
+
+  // 1️⃣ mount loader FIRST
+  await loadLoader();
+
+  // 2️⃣ mount all sections
+  const mountedSections = await loadAllSections();
+
+  // 3️⃣ animate sections
+  initAnimations(mountedSections);
+
+  // 4️⃣ wait 5 seconds AFTER full mount
+  if (window.hideLoaderAfterDelay) {
+    window.hideLoaderAfterDelay(3000);
+  }
+}
+
+initApp();
