@@ -19,49 +19,21 @@ body {
     align-items: center;
 }
 .about-image {
-    width: 420px;
-    height: 420px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    width: 200px; /* adjust to figma */
 }
 
-/* outer hex */
-.hex-border {
+.about-shape {
     width: 100%;
-    height: 100%;
-    background: #001430; /* border color */
-    clip-path: polygon(
-        25% 6%, 
-        75% 6%, 
-        100% 50%, 
-        75% 94%, 
-        25% 94%, 
-        0% 50%
-    );
-    padding: 10px; /* thickness of border */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    display: block;
 }
 
-/* inner image hex */
-.hex-border img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    clip-path: polygon(
-        25% 6%, 
-        75% 6%, 
-        100% 50%, 
-        75% 94%, 
-        25% 94%, 
-        0% 50%
-    );
-}
-
-.about-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.about-photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;   /* adjust until it fits nicely */
+    transform: translate(-50%, -50%);
 }
 .about-content h2 {
     font-size: 32px;
