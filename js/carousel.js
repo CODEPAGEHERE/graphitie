@@ -1,28 +1,25 @@
+document.addEventListener("DOMContentLoaded", function () {
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const track = document.querySelector('.carousel-track');
-//   const slides = document.querySelectorAll('.carousel-item');
-//   const nextBtn = document.querySelector('.carousel-btn.right');
-//   const prevBtn = document.querySelector('.carousel-btn.left');
+  const track = document.querySelector(".carousel-track");
+  const slides = document.querySelectorAll(".carousel-item");
+  const nextBtn = document.querySelector(".carousel-btn.right");
+  const prevBtn = document.querySelector(".carousel-btn.left");
 
-//   if (!track || slides.length === 0) {
-//     console.error("Carousel elements not found");
-//     return;
-//   }
+  let index = 0;
+  const total = slides.length;
 
-//   let index = 0;
+  function updateSlide() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
 
-//   function moveSlide() {
-//     track.style.transform = `translateX(-${index * 100}%)`;
-//   }
+  nextBtn.addEventListener("click", function () {
+    index = (index + 1) % total;
+    updateSlide();
+  });
 
-//   nextBtn.addEventListener('click', () => {
-//     index = (index + 1) % slides.length;
-//     moveSlide();
-//   });
+  prevBtn.addEventListener("click", function () {
+    index = (index - 1 + total) % total;
+    updateSlide();
+  });
 
-//   prevBtn.addEventListener('click', () => {
-//     index = (index - 1 + slides.length) % slides.length;
-//     moveSlide();
-//   });
-// });
+});
