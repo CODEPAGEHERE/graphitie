@@ -1,3 +1,6 @@
+// =========================
+// SECTION LIST
+// =========================
 const sections = [
   'home',
   'about',
@@ -10,22 +13,26 @@ const sections = [
 
 const app = document.getElementById('app');
 
-/**
- * Load loader HTML
- */
+// =========================
+// LOAD LOADER
+// =========================
 async function loadLoader() {
-  const res = await fetch('sections/loader.html');
-  if (!res.ok) throw new Error('Failed to load loader.html');
-  const html = await res.text();
+  try {
+    const res = await fetch('sections/loader.html');
+    if (!res.ok) throw new Error('Failed to load loader.html');
+    const html = await res.text();
 
-  if (window.mountLoader) {
-    window.mountLoader(html);
+    if (window.mountLoader) {
+      window.mountLoader(html);
+    }
+  } catch (err) {
+    console.error('Loader failed:', err);
   }
 }
 
-/**
- * Load a single section
- */
+// =========================
+// LOAD SINGLE SECTION
+// =========================
 async function loadSection(sectionName) {
   try {
     const res = await fetch(`sections/${sectionName}.html`);
@@ -47,18 +54,23 @@ async function loadSection(sectionName) {
   }
 }
 
-/**
- * Load all sections in parallel
- */
-async function loadAllSections() {
-  const promises = sections.map(loadSection);
-  const loaded = await Promise.all(promises);
-  return loaded.filter(Boolean);
+// =========================
+// LOAD ALL SECTIONS SEQUENTIALLY
+// =========================
+async function loadAllSectionsSequentially() {
+  const loadedSections = [];
+
+  for (const section of sections) {
+    const wrapper = await loadSection(section);
+    if (wrapper) loadedSections.push(wrapper);
+  }
+
+  return loadedSections;
 }
 
-/**
- * Initialize animations
- */
+// =========================
+// ANIMATIONS
+// =========================
 function initAnimations(sectionsArray) {
   gsap.from(sectionsArray, {
     opacity: 0,
@@ -68,24 +80,27 @@ function initAnimations(sectionsArray) {
   });
 }
 
-/**
- * App lifecycle
- */
+// =========================
+// APP INIT
+// =========================
 async function initApp() {
 
-  // 1️⃣ mount loader FIRST
+  // 1️⃣ Mount loader first
   await loadLoader();
 
-  // 2️⃣ mount all sections
-  const mountedSections = await loadAllSections();
+  // 2️⃣ Mount all sections strictly in order
+  const mountedSections = await loadAllSectionsSequentially();
 
-  // 3️⃣ animate sections
+  // 3️⃣ Animate sections
   initAnimations(mountedSections);
 
-  // 4️⃣ wait 5 seconds AFTER full mount
+  // 4️⃣ Hide loader after delay (if function exists)
   if (window.hideLoaderAfterDelay) {
     window.hideLoaderAfterDelay(3000);
   }
 }
 
+// =========================
+// START APP
+// =========================
 initApp();

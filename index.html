@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="/css/app.css">
   
   <!--other CSS  files-->
+  <link rel="stylesheet" href="/css/home.css">
   <link rel="stylesheet" href="/css/about.css">
   <link rel="stylesheet" href="/css/services.css">
   <link rel="stylesheet" href="/css/footer.css">
@@ -36,9 +37,38 @@
 </head>
 <body>
 
- 
+
+
+
 	 <!-- Loader first -->
   <div id="loader-mount"></div>
+  
+  
+  
+   <!-- Floating Glass Navbar (moved OUTSIDE home section) -->
+	  <nav class="glass-nav">
+	  
+	  <!-- OPEN button -->
+	  <button class="nav-toggle" id="navOpen">
+		<i class="bi bi-list"></i>
+	  </button>
+
+	  <!-- CLOSE button -->
+	  <button class="nav-toggle nav-close" id="navClose">
+		<i class="bi bi-x-circle"></i>
+	  </button>
+
+	  <ul class="nav-links" id="navLinks">
+		<li><a href="#home">Home</a></li>
+		<li><a href="#about">About</a></li>
+		<li><a href="#portfolio">Portfolio</a></li>
+		<li><a href="#services">Services</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<li><a href="#myskills">MySkills</a></li>
+	  </ul>
+
+	</nav>
+
 
 
   <!-- SPA Root -->
@@ -62,14 +92,14 @@
    
  
    <!-- Hexagon loads -->
-   <script src="./js/myskill.js"></script>
+   <!-- <script src="./js/myskill.js"></script> -->
    
    <script src="/js/contact.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
    <script src="/js/footer.js"></script>
 
  <!-- portfolio section -->
-   <!-- <script src="./js/carousel.js"></script> -->
+   <script src="./js/carousel.js"></script>
   <script type="module" src="/js/home.js"></script>
 
 

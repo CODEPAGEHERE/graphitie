@@ -38,7 +38,7 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom:10px;
+  margin-bottom:20px;
 }
 
 /* =========================
@@ -68,4 +68,154 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
   background: transparent;
+}
+
+
+
+
+
+/* =========================
+   GLASS NAVBAR FLOATING
+========================= */
+.glass-nav {
+  position: sticky;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+
+  width: 45%;
+  max-width: 900px;
+  padding: 14px 30px;
+  border-radius: 60px;
+
+  background: rgba(0, 20, 48, 0.5);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- NEW MEDIA QUERY: For Tablet & Smaller Desktop Screens (e.g., Chromebooks) --- */
+/* Adjust the 'max-width' value below after testing on your Chromebook */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .glass-nav {
+    width: 70%; 
+    padding: 12px 10px;
+	margin-right:-90px !important;
+  }
+  .nav-links {
+    gap: 10px; 
+  }
+  .nav-links li a {
+    font-size: 14px; /* Optionally, slightly reduce font size */
+  }
+}
+
+/* =========================
+   NAV LINKS (DESKTOP)
+========================= */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #E26600;
+  text-decoration: underline;
+}
+
+/* =========================
+   MOBILE NAV BUTTONS
+========================= */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* hide close button by default */
+.nav-close {
+  display: none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  .glass-nav {
+    top: 20px;
+    left: 20px;
+    transform: none;
+    width: auto;
+    padding: 0;
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 1001; /* ABOVE dropdown */
+  }
+
+  /* Open button */
+  #navOpen {
+    display: block;
+    z-index: 1002;
+  }
+
+  /* Close button */
+  #navClose {
+    display: none;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 1003; /* Highest layer */
+    color: #ffffff;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    gap: 25px;
+    padding: 120px 30px 40px 30px;
+    background-color: #001430;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+  }
+
+  /* Toggle visibility when open */
+  .menu-open #navOpen {
+    display: none;
+  }
+
+  .menu-open #navClose {
+    display: block;
+  }
 }
