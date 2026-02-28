@@ -1,10 +1,7 @@
 // Code deciding and influencing the current date of the footer. //
 // COMMENT EN HD /
-// 21/2/'26 //
+// 28/02/'26 //
 
-window.addEventListener("load", function () {
-  const yearSpan = document.getElementById("year");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
+ document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('year').textContent = new Date().getFullYear();
 });
