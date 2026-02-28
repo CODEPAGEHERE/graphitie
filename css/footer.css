@@ -2,12 +2,6 @@
    FOOTER
 ========================= */
 
-/* Ensure full height layout */
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
 /* Make page take full height */
 body {
   display: flex;
