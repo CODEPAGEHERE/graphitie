@@ -187,8 +187,6 @@ body::-webkit-scrollbar-track {
 
 /* =========================
    MOBILE NAV BUTTONS (No change needed here from last step)
-========================= */
-.nav-toggle {
   display: none;
   background: none;
   border: none;
