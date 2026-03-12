@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
   const navOpen = document.getElementById("navOpen");
   const navClose = document.getElementById("navClose");
   const navLinks = document.getElementById("navLinks");
@@ -7,32 +6,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!navOpen || !navClose || !navLinks) return;
 
-  // OPEN
-  navOpen.addEventListener("click", function () {
+  function openNavMenu() {
     navLinks.classList.add("active");
     body.classList.add("menu-open");
-  });
+  }
 
-  // CLOSE
-  navClose.addEventListener("click", function () {
+  function closeNavMenu() {
     navLinks.classList.remove("active");
     body.classList.remove("menu-open");
-  });
+  }
 
-  // Close when link clicked
+  navOpen.addEventListener("click", openNavMenu);
+  navClose.addEventListener("click", closeNavMenu);
+
   navLinks.addEventListener("click", function (e) {
     if (e.target.tagName === "A") {
-      navLinks.classList.remove("active");
-      body.classList.remove("menu-open");
+      closeNavMenu();
     }
   });
 
-  // Close on scroll
+  // Close on scroll - still useful even if page scrolls
   window.addEventListener("scroll", function () {
-    if (body.classList.contains("menu-open")) {
-      navLinks.classList.remove("active");
-      body.classList.remove("menu-open");
+    if (navLinks.classList.contains("active")) {
+      closeNavMenu();
     }
-  });
-
+  }, { passive: true });
 });
