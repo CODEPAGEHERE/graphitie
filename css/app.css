@@ -74,6 +74,10 @@ body::-webkit-scrollbar-track {
 
 
 
+
+
+
+
 /* =========================
    GLASS NAVBAR FLOATING
 ========================= */
@@ -89,9 +93,9 @@ body::-webkit-scrollbar-track {
   padding: 14px 30px;
   border-radius: 60px;
 
-  background: rgba(0, 20, 48, 0.5);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: rgba(0, 20, 48, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 
   display: flex;
@@ -124,6 +128,7 @@ body::-webkit-scrollbar-track {
   gap: 40px;
   margin: 0;
   padding: 0;
+  transition: transform 0.3s ease;
 }
 
 .nav-links li a {
@@ -131,16 +136,57 @@ body::-webkit-scrollbar-track {
   color: #ffffff;
   font-size: 15px;
   font-weight: 500;
+  position: relative; /* CRITICAL: Allows positioning of ::after relative to the link */
   transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #E26600;
-  text-decoration: underline;
+  color: #E26600; 
 }
+
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Adjust this value to control distance from text */
+  left: 50%; /* Start the underline from the horizontal center */
+  width: 0; /* Initially, the underline has no width */
+  height: 2px; /* Thickness of the underline */
+  background-color: #E26600; /* Color of the underline */
+  transform: translateX(-50%); /* Pull it back by half its width to truly center it */
+  transition: width 0.3s ease-in-out; /* Smooth animation for width change */
+}
+
+.nav-links li a:hover::after {
+  width: 100%; 
+}
+
 
 /* =========================
    MOBILE NAV BUTTONS
+========================= */
+.nav-toggle {
+  /* Keep existing styles */
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ffffff;
+  /* Add positioning to make them overlap */
+  position: absolute; /* Position them absolutely within the glass-nav */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Perfectly center them */
+}
+
+/* hide close button by default */
+.nav-close {
+  display: none;
+}
+
+/* =========================
+   MOBILE NAV BUTTONS (No change needed here from last step)
 ========================= */
 .nav-toggle {
   display: none;
@@ -149,9 +195,12 @@ body::-webkit-scrollbar-track {
   font-size: 28px;
   cursor: pointer;
   color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-/* hide close button by default */
 .nav-close {
   display: none;
 }
@@ -161,61 +210,125 @@ body::-webkit-scrollbar-track {
 ========================= */
 @media (max-width: 768px) {
 
+  /* The main nav container for the toggle button (top-left) */
   .glass-nav {
+    position: fixed; /* Fixed to viewport, always visible */
     top: 20px;
-    left: 20px;
+    left: 20px; /* Positions button to the top-left */
     transform: none;
-    width: auto;
+
+    width: 50px;
+    height: 50px;
     padding: 0;
+    border-radius: 50%;
+
+    background: rgba(0, 20, 48, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Highest layer for the button */
+  }
+
+  /* Shared styles for the toggle icons (inside the circular button) */
+  .nav-toggle {
     background: none;
-    backdrop-filter: none;
     border: none;
-    justify-content: flex-start;
-    position: relative;
-    z-index: 1001; /* ABOVE dropdown */
-  }
-
-  /* Open button */
-  #navOpen {
-    display: block;
-    z-index: 1002;
-  }
-
-  /* Close button */
-  #navClose {
-    display: none;
-    position: fixed;
-    top: 25px;
-    right: 25px;
-    z-index: 1003; /* Highest layer */
+    font-size: 28px;
+    cursor: pointer;
     color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the icon in the button */
   }
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
-    gap: 25px;
-    padding: 120px 30px 40px 30px;
-    background-color: #001430;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease;
-    z-index: 1000;
+  
+  /* Icon visibility toggle */
+  #navOpen {
+    display: block; /* Show menu icon initially */
   }
-
-  .nav-links.active {
-    transform: translateY(0);
+  #navClose {
+    display: none; /* Hide close icon initially */
   }
-
-  /* Toggle visibility when open */
   .menu-open #navOpen {
     display: none;
   }
-
   .menu-open #navClose {
     display: block;
+  }
+
+  /* --- MOBILE NAV DROPDOWN STYLES --- */
+  .nav-links {
+    position: fixed;
+    top: 70px; /* Aligned with the top of the toggle button */
+    left: 10px; /* Start position: aligned with the left of the toggle button */
+    
+    /* Set dimensions relative to the LEFT anchor */
+    width: calc(100vw - 20px); /* 80% viewport width, leaving 20px on left/right */
+    max-width: 350px;
+    height: 40vh; /* 1/4 of viewport height */
+    max-height: calc(100vh - 40px); /* Ensure it doesn't exceed screen height */
+    
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+
+    background: rgba(0, 20, 48, 0.4); /* Glass background */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+
+    opacity: 0; /* Start completely transparent */
+    visibility: hidden; /* And non-interactive */
+    
+    /* CRITICAL FIX: Initial state off-screen to the LEFT, relative to its 'left: 20px' */
+    /* This pushes the dropdown entirely off the screen to the left. */
+    transform: translateY(-20px) translateX(calc(-100% - 20px)); /* move LEFT by 100% of its own width + 20px left margin */
+    
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform 0.3s ease-out;
+    
+    z-index: 998; /* Below the toggle button */
+
+    align-items: center; /* Center links horizontally */
+    text-align: center; /* Center text within links */
+    overflow-y: auto; /* Allow internal scrolling if links exceed dropdown height */
+  }
+
+  /* Active state: slides into view from the left, to its final centered position */
+  .nav-links.active {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Interactive */
+    /* Final position: translateY(0) for vertical, translateX(0) to move into view */
+    transform: translateY(0) translateX(0); /* Moves to its original left: 20px position */
+  }
+
+  .nav-links li a {
+    color: #ffffff;
+    font-size: 16px;
+    width: 100%;
+    display: block;
+    padding: 5px 0;
+    position: relative; /* Needed for ::after pseudo-element */
+  }
+  
+  /* Animated underline for mobile links */
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #E26600;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+  }
+
+  .nav-links li a:hover::after {
+    width: 100%;
   }
 }
