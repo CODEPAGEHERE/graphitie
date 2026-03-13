@@ -5,9 +5,9 @@
 <h1 align="center">Graphitie Originals</h1>
 
 <p align="center">
-<img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-7952b3?style=for-the-badge&logo=bootstrap&logoColor=white"/> 
-<img alt="GSAP" src="https://img.shields.io/badge/GSAP-88ce02?style=for-the-badge"/> 
-<img alt="Contentful" src="https://img.shields.io/badge/Contentful-000000?style=for-the-badge"/> 
+<img alt="Frontend" src="https://img.shields.io/badge/Frontend-Bootstrap-7952b3?style=for-the-badge&logo=bootstrap&logoColor=white"/>
+<img alt="Animation" src="https://img.shields.io/badge/Animation-GSAP-88ce02?style=for-the-badge"/>
+<img alt="Assets" src="https://img.shields.io/badge/Assets-Contentful-000000?style=for-the-badge"/>
 </p>
 
 ---
@@ -122,6 +122,19 @@ For feedback, questions, or collaboration:
 
 Copyright © 2026, **Graphitie Originals** – All Rights Reserved.
 Private & proprietary; unauthorized use or distribution is prohibited.
+
+---
+
+## 🗂 Project Info
+
+Code.Page.12 => v.2.1
+Cdot Official Website
+A showcase of cdot collaborations...
+Domain Name : cdot.com
+Live here : cdot.vercel.app
+Last update : 3/3/2026
+Last commit : cp
+
 
 
 
